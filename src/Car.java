@@ -1,6 +1,11 @@
-public class Car {
-    public String modelName;
-    public int wheelsCount;
+public class Car extends Transport implements ServiceEngine {
+
+
+    public Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
+
+
 
     public void updateTyre() {
         System.out.println("Меняем покрышку");
@@ -9,4 +14,7 @@ public class Car {
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
+
+
+
 }
