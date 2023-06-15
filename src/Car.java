@@ -1,4 +1,4 @@
-public class Car extends Transport implements ServiceEngine {
+public class Car extends Bicycle {
 
 
     public Car(String modelName, int wheelsCount) {
@@ -7,12 +7,14 @@ public class Car extends Transport implements ServiceEngine {
 
 
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    public void  checkEngine(){
+        System.out.println("Проверяем двигатель");
     }
 
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+    @Override
+    public void doService() {
+        super.doService();
+        checkEngine();
     }
 
 

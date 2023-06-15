@@ -1,4 +1,4 @@
-public abstract class  Transport  {
+public abstract class  Transport implements Serviceable  {
     private String modelName;
     private int wheelsCount;
 
@@ -23,12 +23,8 @@ public abstract class  Transport  {
         this.wheelsCount = wheelsCount;
     }
     public abstract void updateTyre();
-    public  void   checkWheels() {
-        System.out.println("Обслуживаем " + getModelName());
-        for (int i = 0; i < getWheelsCount(); i++) {
-            updateTyre();
-        }
-    }
+
+
 
 
 
